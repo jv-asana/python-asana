@@ -1,0 +1,34 @@
+{{#operations}}
+from asana.page_iteratorimport import AuditLogAPIIterator
+
+class {{classname}}:
+
+    def __init__(self, client=None):
+        self.client = client
+    
+{{#operation}}
+    def {{operationId}}(self, {{#pathParams}}{{paramName}}, {{/pathParams}}params=None, **options):
+        """{{#summary}}{{{.}}}{{/summary}}{{^summary}}{{operationId}}{{/summary}}
+        {{#pathParams}}
+        :param {{dataType}} {{paramName}}:{{#required}} (required){{/required}}{{#optional}}(optional){{/optional}}{{#description}} {{{description}}}{{/description}}
+        {{/pathParams}}
+        :param Object params: Parameters for the request{{#queryParams}}{{#neq baseName 'opt_pretty' 'opt_fields' 'offset' 'limit'}}
+            - {{paramName}} { {{~dataType~}} }: {{#required}} (required){{/required}}{{#optional}}(optional){{/optional}}{{#description}} {{{description}}}{{/description}}{{/neq}}{{/queryParams}}
+        :param **options{{#queryParams}}{{#eq baseName 'opt_pretty' 'opt_fields' 'offset' 'limit'}}
+            - {{paramName}} { {{~dataType~}} }: {{#required}} (required){{/required}}{{#optional}}(optional){{/optional}}{{#description}} {{{description}}}{{/description}}{{/eq}}{{/queryParams}}
+        :return: Object
+        """
+        if params is None:
+            params = {}
+        path = "{{path}}"{{#pathParams}}.replace("{ {{~baseName~}} }", {{paramName}}){{/pathParams}}
+        options = self.client._merge_options(options)
+        iterator_type = options.get('iterator_type')
+        if iterator_type == 'items':
+            return AuditLogAPIIterator(self.client, path, params, options).items()
+        if iterator_type is None:
+            return self.client.get(path, params, **options)
+        raise Exception(f'Unknown value for "iterator_type" option: {iterator_type}')
+
+        
+{{/operation}}
+{{/operations}}

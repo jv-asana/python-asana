@@ -1,0 +1,4 @@
+# coding=utf-8
+{{#eq classname "AuditLogAPIApi"}}{{>audit_log_api}}{{/eq}}
+{{#eq classname "EventsApi"}}{{>events_api}}{{/eq}}
+{{#neq classname "EventsApi"}}{{#neq classname "AuditLogAPIApi"}}{{>base_api}}{{/neq}}{{/neq}}

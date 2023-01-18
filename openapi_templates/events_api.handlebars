@@ -1,0 +1,22 @@
+{{#operations}}
+from asana.page_iterator import EventsPageIterator
+{{>base_api}}
+
+{{#operation}}
+    def get_events_iterator(self, {{#pathParams}}{{paramName}}, {{/pathParams}}params=None, **options):
+        """{{#summary}}{{{.}}}{{/summary}}{{^summary}}{{operationId}}{{/summary}}
+        {{#pathParams}}
+        :param {{dataType}} {{paramName}}:{{#required}} (required){{/required}}{{#optional}}(optional){{/optional}}{{#description}} {{{description}}}{{/description}}
+        {{/pathParams}}
+        :param Object params: Parameters for the request{{#queryParams}}{{#neq baseName 'opt_pretty' 'opt_fields' 'offset' 'limit'}}
+            - {{paramName}} { {{~dataType~}} }: {{#required}} (required){{/required}}{{#optional}}(optional){{/optional}}{{#description}} {{{description}}}{{/description}}{{/neq}}{{/queryParams}}
+        :param **options{{#queryParams}}{{#eq baseName 'opt_pretty' 'opt_fields' 'offset' 'limit'}}
+            - {{paramName}} { {{~dataType~}} }: {{#required}} (required){{/required}}{{#optional}}(optional){{/optional}}{{#description}} {{{description}}}{{/description}}{{/eq}}{{/queryParams}}
+        :return: Object
+        """
+        if params is None:
+            params = {}
+        return EventsPageIterator(self.client, '{{path}}', params, options).items()
+        
+{{/operation}}
+{{/operations}}
