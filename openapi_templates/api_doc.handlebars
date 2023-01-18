@@ -6,7 +6,6 @@
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
-
-        result = client.{{baseName.toLowerCase}}.{{operationId}}({{#pathParams}}{{paramName}}, {{/pathParams}}{{#neq "GET" httpMethod}}{{#neq "DELETE" httpMethod}}{'field': 'value', 'field': 'value'}, {{/neq}}{{/neq}}{{#eq "GET" httpMethod}}{'param': 'value', 'param': 'value'}, {{/eq}}opt_pretty=True)
+        result = client.{{baseName.toLowerCase}}.{{operationId}}({{#pathParams}}{{paramName}}, {{/pathParams}}{{#neq "get" httpMethod}}{{#neq "delete" httpMethod}}{'field': 'value', 'field': 'value'}, {{/neq}}{{/neq}}{{#eq "get" httpMethod}}{'param': 'value', 'param': 'value'}, {{/eq}}opt_pretty=True)
 {{/operation}}
 {{/operations}}
