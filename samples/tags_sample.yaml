@@ -1,10 +1,9 @@
-tags: 
+: 
     create_tag: >-
         import asana
 
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
-
 
         result = client.tags.create_tag({'field': 'value', 'field': 'value'}, opt_pretty=True)
     create_tag_for_workspace: >-
@@ -13,14 +12,12 @@ tags:
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
-
         result = client.tags.create_tag_for_workspace(workspace_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     delete_tag: >-
         import asana
 
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
-
 
         result = client.tags.delete_tag(tag_gid, opt_pretty=True)
     get_tag: >-
@@ -29,14 +26,12 @@ tags:
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
-
         result = client.tags.get_tag(tag_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_tags: >-
         import asana
 
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
-
 
         result = client.tags.get_tags({'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_tags_for_task: >-
@@ -45,7 +40,6 @@ tags:
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
-
         result = client.tags.get_tags_for_task(task_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_tags_for_workspace: >-
         import asana
@@ -53,13 +47,11 @@ tags:
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
-
         result = client.tags.get_tags_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     update_tag: >-
         import asana
 
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
-
 
         result = client.tags.update_tag(tag_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
