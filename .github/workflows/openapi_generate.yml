@@ -17,8 +17,7 @@ jobs:
         run: ./generate_api.sh
       - name: Check for changes
         run: |
-          if [[ `git status --porcelain` ]]
-          then
+          if [[ `git status --porcelain` ]]; then
             echo "Modified=true" >> $GITHUB_ENV
           if
       - name: Commit code changes
