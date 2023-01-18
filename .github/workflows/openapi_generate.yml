@@ -1,4 +1,4 @@
-name: Asana api generation
+name: Generate APIs
 run-name: ${{ github.actor }} is generating apis
 on: workflow_dispatch
 jobs:
