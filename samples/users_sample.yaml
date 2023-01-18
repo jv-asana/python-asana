@@ -1,10 +1,9 @@
-users: 
+: 
     get_favorites_for_user: >-
         import asana
 
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
-
 
         result = client.users.get_favorites_for_user(user_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_user: >-
@@ -13,14 +12,12 @@ users:
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
-
         result = client.users.get_user(user_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_users: >-
         import asana
 
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
-
 
         result = client.users.get_users({'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_users_for_team: >-
@@ -29,13 +26,11 @@ users:
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
-
         result = client.users.get_users_for_team(team_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_users_for_workspace: >-
         import asana
 
 
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
-
 
         result = client.users.get_users_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
