@@ -1,4 +1,4 @@
-projects: 
+: 
     add_custom_field_setting_for_project: >-
         import asana
 
@@ -54,7 +54,7 @@ projects:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.projects.delete_project(project_gid, opt_pretty=True)
+        result = client.projects.delete_project(project_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     duplicate_project: >-
         import asana
 
@@ -70,7 +70,7 @@ projects:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.projects.get_project(project_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.projects.get_project(project_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_projects: >-
         import asana
 
@@ -78,7 +78,7 @@ projects:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.projects.get_projects({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.projects.get_projects({'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_projects_for_task: >-
         import asana
 
@@ -86,7 +86,7 @@ projects:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.projects.get_projects_for_task(task_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.projects.get_projects_for_task(task_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_projects_for_team: >-
         import asana
 
@@ -94,7 +94,7 @@ projects:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.projects.get_projects_for_team(team_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.projects.get_projects_for_team(team_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_projects_for_workspace: >-
         import asana
 
@@ -102,7 +102,7 @@ projects:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.projects.get_projects_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.projects.get_projects_for_workspace(workspace_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_task_counts_for_project: >-
         import asana
 
@@ -110,7 +110,7 @@ projects:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.projects.get_task_counts_for_project(project_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.projects.get_task_counts_for_project(project_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     project_save_as_template: >-
         import asana
 

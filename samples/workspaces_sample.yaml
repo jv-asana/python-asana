@@ -1,4 +1,4 @@
-workspaces: 
+: 
     add_user_for_workspace: >-
         import asana
 
@@ -14,7 +14,7 @@ workspaces:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.workspaces.get_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.workspaces.get_workspace(workspace_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_workspaces: >-
         import asana
 
@@ -22,7 +22,7 @@ workspaces:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.workspaces.get_workspaces({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.workspaces.get_workspaces({'field': 'value', 'field': 'value'}, opt_pretty=True)
     remove_user_for_workspace: >-
         import asana
 

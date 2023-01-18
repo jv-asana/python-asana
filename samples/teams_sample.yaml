@@ -1,4 +1,4 @@
-teams: 
+: 
     add_user_for_team: >-
         import asana
 
@@ -22,7 +22,7 @@ teams:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.teams.get_team(team_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.teams.get_team(team_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_teams_for_user: >-
         import asana
 
@@ -30,7 +30,7 @@ teams:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.teams.get_teams_for_user(user_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.teams.get_teams_for_user(user_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_teams_for_workspace: >-
         import asana
 
@@ -38,7 +38,7 @@ teams:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.teams.get_teams_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.teams.get_teams_for_workspace(workspace_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     remove_user_for_team: >-
         import asana
 

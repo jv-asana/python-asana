@@ -1,0 +1,17 @@
+: 
+    create_organization_export: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.organization exports.create_organization_export({'field': 'value', 'field': 'value'}, opt_pretty=True)
+    get_organization_export: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.organization exports.get_organization_export(organization_export_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)

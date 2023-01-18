@@ -1,4 +1,4 @@
-typeahead: 
+: 
     typeahead_for_workspace: >-
         import asana
 
@@ -6,4 +6,4 @@ typeahead:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.typeahead.typeahead_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.typeahead.typeahead_for_workspace(workspace_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)

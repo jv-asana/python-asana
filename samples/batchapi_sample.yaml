@@ -1,0 +1,9 @@
+: 
+    create_batch_request: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.batch api.create_batch_request({'field': 'value', 'field': 'value'}, opt_pretty=True)

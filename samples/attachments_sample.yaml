@@ -1,4 +1,4 @@
-attachments: 
+: 
     create_attachment_for_object: >-
         import asana
 
@@ -14,7 +14,7 @@ attachments:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.attachments.delete_attachment(attachment_gid, opt_pretty=True)
+        result = client.attachments.delete_attachment(attachment_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_attachment: >-
         import asana
 
@@ -22,7 +22,7 @@ attachments:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.attachments.get_attachment(attachment_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.attachments.get_attachment(attachment_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_attachments_for_object: >-
         import asana
 
@@ -30,4 +30,4 @@ attachments:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.attachments.get_attachments_for_object({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.attachments.get_attachments_for_object({'field': 'value', 'field': 'value'}, opt_pretty=True)

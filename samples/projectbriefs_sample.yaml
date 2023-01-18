@@ -1,0 +1,33 @@
+: 
+    create_project_brief: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.project briefs.create_project_brief(project_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+    delete_project_brief: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.project briefs.delete_project_brief(project_brief_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+    get_project_brief: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.project briefs.get_project_brief(project_brief_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+    update_project_brief: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.project briefs.update_project_brief(project_brief_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)

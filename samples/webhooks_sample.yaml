@@ -1,4 +1,4 @@
-webhooks: 
+: 
     create_webhook: >-
         import asana
 
@@ -14,7 +14,7 @@ webhooks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.webhooks.delete_webhook(webhook_gid, opt_pretty=True)
+        result = client.webhooks.delete_webhook(webhook_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_webhook: >-
         import asana
 
@@ -22,7 +22,7 @@ webhooks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.webhooks.get_webhook(webhook_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.webhooks.get_webhook(webhook_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_webhooks: >-
         import asana
 
@@ -30,7 +30,7 @@ webhooks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.webhooks.get_webhooks({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.webhooks.get_webhooks({'field': 'value', 'field': 'value'}, opt_pretty=True)
     update_webhook: >-
         import asana
 

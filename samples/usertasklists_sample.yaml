@@ -1,0 +1,17 @@
+: 
+    get_user_task_list: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.user task lists.get_user_task_list(user_task_list_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+    get_user_task_list_for_user: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.user task lists.get_user_task_list_for_user(user_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)

@@ -1,0 +1,25 @@
+: 
+    get_portfolio_membership: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.portfolio memberships.get_portfolio_membership(portfolio_membership_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+    get_portfolio_memberships: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.portfolio memberships.get_portfolio_memberships({'field': 'value', 'field': 'value'}, opt_pretty=True)
+    get_portfolio_memberships_for_portfolio: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+
+        result = client.portfolio memberships.get_portfolio_memberships_for_portfolio(portfolio_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)

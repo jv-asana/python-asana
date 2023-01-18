@@ -1,4 +1,4 @@
-portfolios: 
+: 
     add_custom_field_setting_for_portfolio: >-
         import asana
 
@@ -38,7 +38,7 @@ portfolios:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.portfolios.delete_portfolio(portfolio_gid, opt_pretty=True)
+        result = client.portfolios.delete_portfolio(portfolio_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_items_for_portfolio: >-
         import asana
 
@@ -46,7 +46,7 @@ portfolios:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.portfolios.get_items_for_portfolio(portfolio_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.portfolios.get_items_for_portfolio(portfolio_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_portfolio: >-
         import asana
 
@@ -54,7 +54,7 @@ portfolios:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.portfolios.get_portfolio(portfolio_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.portfolios.get_portfolio(portfolio_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_portfolios: >-
         import asana
 
@@ -62,7 +62,7 @@ portfolios:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.portfolios.get_portfolios({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.portfolios.get_portfolios({'field': 'value', 'field': 'value'}, opt_pretty=True)
     remove_custom_field_setting_for_portfolio: >-
         import asana
 

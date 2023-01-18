@@ -1,4 +1,4 @@
-tasks: 
+: 
     add_dependencies_for_task: >-
         import asana
 
@@ -62,7 +62,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.delete_task(task_gid, opt_pretty=True)
+        result = client.tasks.delete_task(task_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     duplicate_task: >-
         import asana
 
@@ -78,7 +78,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_dependencies_for_task(task_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_dependencies_for_task(task_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_dependents_for_task: >-
         import asana
 
@@ -86,7 +86,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_dependents_for_task(task_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_dependents_for_task(task_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_subtasks_for_task: >-
         import asana
 
@@ -94,7 +94,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_subtasks_for_task(task_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_subtasks_for_task(task_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_task: >-
         import asana
 
@@ -102,7 +102,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_task(task_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_task(task_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_tasks: >-
         import asana
 
@@ -110,7 +110,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_tasks({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_tasks({'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_tasks_for_project: >-
         import asana
 
@@ -118,7 +118,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_tasks_for_project(project_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_tasks_for_project(project_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_tasks_for_section: >-
         import asana
 
@@ -126,7 +126,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_tasks_for_section(section_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_tasks_for_section(section_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_tasks_for_tag: >-
         import asana
 
@@ -134,7 +134,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_tasks_for_tag(tag_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_tasks_for_tag(tag_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_tasks_for_user_task_list: >-
         import asana
 
@@ -142,7 +142,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.get_tasks_for_user_task_list(user_task_list_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.get_tasks_for_user_task_list(user_task_list_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     remove_dependencies_for_task: >-
         import asana
 
@@ -190,7 +190,7 @@ tasks:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.tasks.search_tasks_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.tasks.search_tasks_for_workspace(workspace_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     set_parent_for_task: >-
         import asana
 
