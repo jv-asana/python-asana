@@ -1,0 +1,8 @@
+: 
+    get_job: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+        result = client.jobs.get_job(job_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)

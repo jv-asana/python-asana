@@ -1,0 +1,7 @@
+from asana.paths.tasks_task_gid_remove_tag.post import ApiForpost
+
+
+class TasksTaskGidRemoveTag(
+    ApiForpost,
+):
+    pass

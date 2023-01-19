@@ -1,0 +1,7 @@
+from asana.paths.teams_team_gid_team_memberships.get import ApiForget
+
+
+class TeamsTeamGidTeamMemberships(
+    ApiForget,
+):
+    pass
