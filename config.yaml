@@ -1,7 +1,5 @@
 generatorName: python
-inputSpec: https://raw.githubusercontent.com/Asana/developer-docs/master/defs/asana_oas.yaml
 outputDir: openapi_generated_files
-templateDir: openapi_templates
 packageName: asana
 generateModelTests: false
 generateApiTests: false

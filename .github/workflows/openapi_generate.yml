@@ -19,6 +19,8 @@ jobs:
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator-tag: v6.2.1
+          openapi-url: https://raw.githubusercontent.com/Asana/developer-docs/master/defs/asana_oas.yaml
+          template-dir: openapi_templates
           config-file: config.yaml
       - name: Post process
         run: ./generate_api.sh
