@@ -47,7 +47,7 @@ jobs:
           # Use the newest commit message as the release description
           body: ${{ github.event.head_commit.message }}
   build-n-publish-to-pypi:
-    needs: publish-to-github
+    needs: [bump-semantic-versioning, publish-to-github]
     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
     runs-on: ubuntu-latest
     steps:
