@@ -17,7 +17,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     long_description = readme.read()
 
 setup(
-    name='asana',
+    name='jv-asana-test',
     version=version['__version__'],
     description='Asana API client',
     long_description=long_description,
