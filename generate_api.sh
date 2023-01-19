@@ -10,25 +10,6 @@ ASANA_DOCS_DIR=$CURRENT_DIR/samples
 # utility function for printing error
 echoerr() { echo "$@" 1>&2; }
 
-# get open api generator jar
-get_openapi_generator_cli() {
-    if [ -z $OPENAPI_GENERATOR_CLI ]; then
-        WGET=$(which wget)
-        [ $? -ne 0 ] && { echoerr "wget tool was not found in system"; exit 1; }
-
-        # trying to download openapi-generator
-        OPENAPI_GENERATOR_CLI="$CURRENT_DIR/openapi-generator-cli.jar"
-        $WGET "$OPENAPI_GENERATOR_CLI_URL" -O $OPENAPI_GENERATOR_CLI
-        [ $? -ne 0 ] && { echoerr 'Could not download openapi-generator by "OPENAPI_GENERATOR_CLI_URL"'; exit 1; }
-    fi
-}
-
-# check and install openjdk
-check_java() {
-    # TODO :: check if openjdk is present in system and install it otherwise
-    :
-}
-
 # create working dir for store generated code
 create_out_dir() {
     if [ -d $OUT_DIR ]; then
@@ -39,8 +20,6 @@ create_out_dir() {
 
 # prepare generation
 prepare_generation() {
-    check_java
-    get_openapi_generator_cli
     create_out_dir
 }
 
@@ -48,12 +27,6 @@ prepare_generation() {
 clean () {
     rm -rf $OUT_DIR
     rm $OPENAPI_GENERATOR_CLI
-}
-
-# generate apis
-generate() {
-    java -jar $OPENAPI_GENERATOR_CLI generate -i $ASANA_OAS -g python -o $OUT_DIR -t $TEMPLATE_DIR \
-             --global-property apis,apiDocs=true,apiTests=false -p packageName=asana
 }
 
 # remove Api suffix from api's class name
@@ -111,12 +84,7 @@ main() {
     prepare_generation
 
     # generate apis
-    generate
-
-    # process apis if generation was success
-    return_value=$?
-    [ $return_value -eq 0 ] && { post_process || exit_code=$?; } || \
-                            { echoerr "Generation failed"; exit_code=$return_value; }
+    post_process
 
     # clean generation folder
     clean
