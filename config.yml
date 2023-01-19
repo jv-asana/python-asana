@@ -1,2 +1,5 @@
 outputDir: openapi_generated_files
 packageName: asana
+generateModelTests: false
+generateModelDocumentation: false
+generateApiTests: false
