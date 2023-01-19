@@ -18,7 +18,8 @@ jobs:
       - name: Generate Python Client
         uses: openapi-generators/openapitools-generator-action@v1
         with:
-          config-file: config.yml
+          generator-tag: v6.2.1
+          config-file: config.yaml
       - name: Post process
         run: ./generate_api.sh
       - name: Check for changes
