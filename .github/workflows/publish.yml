@@ -27,12 +27,12 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           python deploy.py ${{ inputs.bumpVersion }}
+          git pull
   publish-to-github:
     needs: bump-semantic-versioning
     name: Publish to GitHub Releases
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Get version tag
         id: tag
         run: echo "release_tag=v$(cat VERSION)" >> $GITHUB_OUTPUT
@@ -49,7 +49,6 @@ jobs:
     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Set up Python 3.7
         uses: actions/setup-python@v4
         with:
