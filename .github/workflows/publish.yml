@@ -3,9 +3,10 @@ name: Publish Python 🐍 distributions 📦 to PyPI and GitHub
 on:
   workflow_dispatch:
     inputs:
-      bump_version:
-        type: choice
+      bumpVersion:
         description: Choose a version number to bump
+        required: true 
+        type: choice
         options:
           - major
           - minor
@@ -23,7 +24,7 @@ jobs:
           python-version: 3.7
       - name: Run deploy script
         run: |
-          python deploy.py ${ github.event.inputs.bump_version }
+          python deploy.py ${ inputs.bumpVersion }
   publish-to-github:
     needs: bump-semantic-versioning
     name: Publish to GitHub Releases
