@@ -8,9 +8,9 @@ on:
         required: true 
         type: choice
         options:
-          - major
-          - minor
           - patch
+          - minor
+          - major
 
 jobs:
   bump-semantic-versioning:
@@ -24,7 +24,7 @@ jobs:
           python-version: 3.7
       - name: Run deploy script
         run: |
-          python deploy.py ${ inputs.bumpVersion }
+          python deploy.py ${{ inputs.bumpVersion }}
   publish-to-github:
     needs: bump-semantic-versioning
     name: Publish to GitHub Releases
