@@ -1,0 +1,15 @@
+: 
+    get_custom_field_settings_for_portfolio: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+        result = client.custom field settings.get_custom_field_settings_for_portfolio(portfolio_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+    get_custom_field_settings_for_project: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+        result = client.custom field settings.get_custom_field_settings_for_project(project_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)

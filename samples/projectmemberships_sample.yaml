@@ -1,0 +1,15 @@
+: 
+    get_project_membership: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+        result = client.project memberships.get_project_membership(project_membership_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+    get_project_memberships_for_project: >-
+        import asana
+
+
+        client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
+
+        result = client.project memberships.get_project_memberships_for_project(project_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
