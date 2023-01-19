@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.7
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
           python-version: 3.7
       - name: Run deploy script
@@ -35,13 +35,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Get version tag
         id: tag
-        run: echo ::set-output name=version::v$(cat VERSION)
+        run: echo "release_tag=v${{ cat VERSION }}" >> $GITHUB_OUTPUT
       - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.tag.outputs.version }}
+          tag_name: ${{ steps.tag.outputs.release_tag }}
           # Use the newest commit message as the release description
           body: ${{ github.event.head_commit.message }}
   build-n-publish-to-pypi:
@@ -51,7 +51,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.7
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
           python-version: 3.7
       - name: Install pypa/build
@@ -69,7 +69,7 @@ jobs:
           --outdir dist/
           .
       - name: Publish distribution 📦 to Test PyPI
-        uses: pypa/gh-action-pypi-publish@master
+        uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
           repository_url: https://test.pypi.org/legacy/
