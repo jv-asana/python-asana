@@ -36,8 +36,6 @@ jobs:
       - name: Get version tag
         id: tag
         run: echo ::set-output name=version::v$(cat VERSION)
-      - name: Test output
-        run: echo ${{ steps.tag.outputs.version }}
       - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@v1
         env:
