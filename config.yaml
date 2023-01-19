@@ -1,5 +1,0 @@
-generatorName: python
-outputDir: openapi_generated_files
-packageName: asana
-generateModelTests: false
-generateApiTests: false
