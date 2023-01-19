@@ -35,7 +35,7 @@ jobs:
         uses: devops-infra/action-pull-request@v0.5.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          body: "**Automated pull request**<br><br>Initiated by ${GITHUB_ACTOR}<br>"
+          body: "**Automated pull request**<br><br>Initiated by: ${{GITHUB_ACTOR}}<br>job_id: ${{GITHUB_JOB}}<br>run_id: ${{GITHUB_RUN_ID}}"
           title: ${{ github.event.commits[0].message }}
           label: auto-gen
       - run: echo "🍏 This job's status is ${{ job.status }}."
