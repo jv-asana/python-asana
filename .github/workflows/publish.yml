@@ -32,9 +32,15 @@ jobs:
     name: Publish to GitHub Releases
     runs-on: ubuntu-latest
     steps:
+      - name: Get version tag
+        id: tag
+        run: echo ::set-output name=version::v$(cat VERSION)
       - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          tag_name: ${{ steps.tag.outputs.version }}
           # Use the newest commit message as the release description
           body: ${{ github.event.head_commit.message }}
   build-n-publish-to-pypi:
