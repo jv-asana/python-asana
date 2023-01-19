@@ -32,9 +32,12 @@ jobs:
     name: Publish to GitHub Releases
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Get version tag
         id: tag
         run: echo ::set-output name=version::v$(cat VERSION)
+      - name: Test output
+        run: echo ${{ steps.tag.outputs.version }}
       - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@v1
         env:
@@ -44,7 +47,7 @@ jobs:
           # Use the newest commit message as the release description
           body: ${{ github.event.head_commit.message }}
   build-n-publish-to-pypi:
-    needs: bump-semantic-versioning
+    needs: publish-to-github
     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
     runs-on: ubuntu-latest
     steps:
