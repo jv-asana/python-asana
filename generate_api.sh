@@ -101,7 +101,7 @@ post_process_docs() {
 
 post_process() {
     post_process_apis || { echoerr "Could not post process apis"; return 1; }
-    post_process_docs || { echoerr "Could not post process docs"; return 1; }
+    # post_process_docs || { echoerr "Could not post process docs"; return 1; }
 }
 
 main() {
