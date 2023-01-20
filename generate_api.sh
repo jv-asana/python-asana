@@ -53,7 +53,7 @@ clean () {
 # generate apis
 generate() {
     java -jar $OPENAPI_GENERATOR_CLI generate -i $ASANA_OAS -g python -o $OUT_DIR -t $TEMPLATE_DIR \
-             --global-property apis,apiDocs=true,apiTests=false -p packageName=asana
+             --global-property apis=true,apiDocs,apiTests=false -p packageName=asana
 }
 
 # remove Api suffix from api's class name
