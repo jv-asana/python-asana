@@ -1,4 +1,4 @@
-events: 
+eventsapi:
     get_events: >-
         import asana
 

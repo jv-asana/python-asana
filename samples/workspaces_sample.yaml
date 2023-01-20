@@ -1,4 +1,4 @@
-workspaces: 
+workspacesapi:
     add_user_for_workspace: >-
         import asana
 

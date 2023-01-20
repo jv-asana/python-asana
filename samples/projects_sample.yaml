@@ -1,4 +1,4 @@
-projects: 
+projectsapi:
     add_custom_field_setting_for_project: >-
         import asana
 

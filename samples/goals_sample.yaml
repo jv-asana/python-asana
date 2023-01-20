@@ -1,4 +1,4 @@
-goals: 
+goalsapi:
     add_followers: >-
         import asana
 

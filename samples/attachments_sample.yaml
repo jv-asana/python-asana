@@ -1,4 +1,4 @@
-attachments: 
+attachmentsapi:
     create_attachment_for_object: >-
         import asana
 

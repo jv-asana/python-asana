@@ -1,4 +1,4 @@
-projecttemplates: 
+projecttemplatesapi:
     get_project_template: >-
         import asana
 
@@ -6,7 +6,7 @@ projecttemplates:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.project_templates.get_project_template(project_template_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.project templates.get_project_template(project_template_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_project_templates: >-
         import asana
 
@@ -14,7 +14,7 @@ projecttemplates:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.project_templates.get_project_templates({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.project templates.get_project_templates({'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_project_templates_for_team: >-
         import asana
 
@@ -22,7 +22,7 @@ projecttemplates:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.project_templates.get_project_templates_for_team(team_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.project templates.get_project_templates_for_team(team_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     instantiate_project: >-
         import asana
 
@@ -30,4 +30,4 @@ projecttemplates:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.project_templates.instantiate_project(project_template_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.project templates.instantiate_project(project_template_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)

@@ -1,4 +1,4 @@
-teams: 
+teamsapi:
     add_user_for_team: >-
         import asana
 

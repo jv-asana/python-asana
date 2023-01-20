@@ -1,4 +1,4 @@
-batchapi: 
+batchapiapi:
     create_batch_request: >-
         import asana
 
@@ -6,4 +6,4 @@ batchapi:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.batch_api.create_batch_request({'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.batch api.create_batch_request({'field': 'value', 'field': 'value'}, opt_pretty=True)
