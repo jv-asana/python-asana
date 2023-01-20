@@ -1,4 +1,4 @@
-jobs: 
+jobsapi:
     get_job: >-
         import asana
 

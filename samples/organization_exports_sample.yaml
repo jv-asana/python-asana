@@ -1,4 +1,4 @@
-organizationexports: 
+organizationexportsapi:
     create_organization_export: >-
         import asana
 
@@ -6,7 +6,7 @@ organizationexports:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.organization_exports.create_organization_export({'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.organization exports.create_organization_export({'field': 'value', 'field': 'value'}, opt_pretty=True)
     get_organization_export: >-
         import asana
 
@@ -14,4 +14,4 @@ organizationexports:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.organization_exports.get_organization_export(organization_export_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.organization exports.get_organization_export(organization_export_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)

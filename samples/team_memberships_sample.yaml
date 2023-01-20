@@ -1,4 +1,4 @@
-teammemberships: 
+teammembershipsapi:
     get_team_membership: >-
         import asana
 
@@ -6,7 +6,7 @@ teammemberships:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.team_memberships.get_team_membership(team_membership_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.team memberships.get_team_membership(team_membership_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_team_memberships: >-
         import asana
 
@@ -14,7 +14,7 @@ teammemberships:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.team_memberships.get_team_memberships({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.team memberships.get_team_memberships({'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_team_memberships_for_team: >-
         import asana
 
@@ -22,7 +22,7 @@ teammemberships:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.team_memberships.get_team_memberships_for_team(team_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.team memberships.get_team_memberships_for_team(team_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_team_memberships_for_user: >-
         import asana
 
@@ -30,4 +30,4 @@ teammemberships:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.team_memberships.get_team_memberships_for_user(user_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.team memberships.get_team_memberships_for_user(user_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)

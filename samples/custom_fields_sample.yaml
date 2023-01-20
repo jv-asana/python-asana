@@ -1,4 +1,4 @@
-customfields: 
+customfieldsapi:
     create_custom_field: >-
         import asana
 
@@ -6,7 +6,7 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.create_custom_field({'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.custom fields.create_custom_field({'field': 'value', 'field': 'value'}, opt_pretty=True)
     create_enum_option_for_custom_field: >-
         import asana
 
@@ -14,7 +14,7 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.create_enum_option_for_custom_field(custom_field_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.custom fields.create_enum_option_for_custom_field(custom_field_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     delete_custom_field: >-
         import asana
 
@@ -22,7 +22,7 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.delete_custom_field(custom_field_gid, opt_pretty=True)
+        result = client.custom fields.delete_custom_field(custom_field_gid, opt_pretty=True)
     get_custom_field: >-
         import asana
 
@@ -30,7 +30,7 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.get_custom_field(custom_field_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.custom fields.get_custom_field(custom_field_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_custom_fields_for_workspace: >-
         import asana
 
@@ -38,7 +38,7 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.get_custom_fields_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.custom fields.get_custom_fields_for_workspace(workspace_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     insert_enum_option_for_custom_field: >-
         import asana
 
@@ -46,7 +46,7 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.insert_enum_option_for_custom_field(custom_field_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.custom fields.insert_enum_option_for_custom_field(custom_field_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     update_custom_field: >-
         import asana
 
@@ -54,7 +54,7 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.update_custom_field(custom_field_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.custom fields.update_custom_field(custom_field_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
     update_enum_option: >-
         import asana
 
@@ -62,4 +62,4 @@ customfields:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.custom_fields.update_enum_option(enum_option_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)
+        result = client.custom fields.update_enum_option(enum_option_gid, {'field': 'value', 'field': 'value'}, opt_pretty=True)

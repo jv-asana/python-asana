@@ -1,4 +1,4 @@
-users: 
+usersapi:
     get_favorites_for_user: >-
         import asana
 

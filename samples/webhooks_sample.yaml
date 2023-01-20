@@ -1,4 +1,4 @@
-webhooks: 
+webhooksapi:
     create_webhook: >-
         import asana
 

@@ -1,4 +1,4 @@
-portfolios: 
+portfoliosapi:
     add_custom_field_setting_for_portfolio: >-
         import asana
 

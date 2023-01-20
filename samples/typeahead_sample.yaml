@@ -1,4 +1,4 @@
-typeahead: 
+typeaheadapi:
     typeahead_for_workspace: >-
         import asana
 

@@ -1,4 +1,4 @@
-portfoliomemberships: 
+portfoliomembershipsapi:
     get_portfolio_membership: >-
         import asana
 
@@ -6,7 +6,7 @@ portfoliomemberships:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.portfolio_memberships.get_portfolio_membership(portfolio_membership_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.portfolio memberships.get_portfolio_membership(portfolio_membership_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_portfolio_memberships: >-
         import asana
 
@@ -14,7 +14,7 @@ portfoliomemberships:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.portfolio_memberships.get_portfolio_memberships({'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.portfolio memberships.get_portfolio_memberships({'param': 'value', 'param': 'value'}, opt_pretty=True)
     get_portfolio_memberships_for_portfolio: >-
         import asana
 
@@ -22,4 +22,4 @@ portfoliomemberships:
         client = asana.Client.access_token('PERSONAL_ACCESS_TOKEN')
 
 
-        result = client.portfolio_memberships.get_portfolio_memberships_for_portfolio(portfolio_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
+        result = client.portfolio memberships.get_portfolio_memberships_for_portfolio(portfolio_gid, {'param': 'value', 'param': 'value'}, opt_pretty=True)
