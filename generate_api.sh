@@ -23,6 +23,11 @@ get_openapi_generator_cli() {
     fi
 }
 
+# check and install openjdk
+check_java() {
+    # TODO :: check if openjdk is present in system and install it otherwise
+    :
+}
 
 # create working dir for store generated code
 create_out_dir() {
@@ -34,6 +39,7 @@ create_out_dir() {
 
 # prepare generation
 prepare_generation() {
+    check_java
     get_openapi_generator_cli
     create_out_dir
 }
@@ -85,7 +91,7 @@ post_process_docs() {
     for file in *Api.md; do
         ### lowercase docs files and remove suffix
         ### TODO :: trying to use native bash opportunities instead call tr each time
-        new_file_name=$(echo "${file%%Api.md}_sample.yaml" | tr '[:upper:]' '[:lower:]')
+        new_file_name=$(echo "${file%%Api.md}_sample.yaml" | sed -re 's/API/Api/g;s/([A-Z])/_\1/g;s/^_//' | tr '[:upper:]' '[:lower:]')
         mv -- "$file" "$new_file_name" || return 1;
     done
     cd $CURRENT_DIR || return 1;
